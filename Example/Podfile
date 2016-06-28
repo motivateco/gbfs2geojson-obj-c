@@ -1,0 +1,6 @@
+use_frameworks!
+target 'gbfs2geojson_Tests' do
+  pod 'gbfs2geojson', :path => '../'
+  
+  
+end
