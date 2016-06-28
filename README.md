@@ -26,4 +26,5 @@ Andrew Fischer, afischer15@mac.com
 
 ## License
 
-gbfs2geojson is available under the MIT license. See the LICENSE file for more info.
+gbfs2geojson is available under the Creative Commons Attribution 3.0 Unported license. 
+See the LICENSE file for more info.
