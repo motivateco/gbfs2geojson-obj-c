@@ -1,0 +1,16 @@
+PODS:
+  - gbfs2geojson (0.1.0)
+
+DEPENDENCIES:
+  - gbfs2geojson (from `../`)
+
+EXTERNAL SOURCES:
+  gbfs2geojson:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  gbfs2geojson: 415eaee4acd9bb669ebf867c41a578a1ba54eb22
+
+PODFILE CHECKSUM: 52048eb256da0cbee98e6ae975e8384ffab297e3
+
+COCOAPODS: 1.0.1
