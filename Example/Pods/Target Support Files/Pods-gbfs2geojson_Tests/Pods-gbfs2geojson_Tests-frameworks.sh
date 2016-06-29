@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/VVJSONSchemaValidation/VVJSONSchemaValidation.framework"
   install_framework "$BUILT_PRODUCTS_DIR/gbfs2geojson/gbfs2geojson.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/VVJSONSchemaValidation/VVJSONSchemaValidation.framework"
   install_framework "$BUILT_PRODUCTS_DIR/gbfs2geojson/gbfs2geojson.framework"
 fi

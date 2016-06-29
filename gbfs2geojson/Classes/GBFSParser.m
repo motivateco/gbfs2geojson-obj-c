@@ -32,7 +32,8 @@
 }
 
 + (NSDictionary *) featureListFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL {
-    NSMutableDictionary *features = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *geoJSON  = [[NSMutableDictionary alloc] initWithDictionary:@{@"type": @"FeatureCollection"}];
+    NSMutableDictionary *allStations = [[NSMutableDictionary alloc] init];
     NSError *statusError;
     NSError *infoError;
     
@@ -44,21 +45,38 @@
     
     
     for (NSDictionary *station in stationStatus[@"data"][@"stations"]) {
-        NSMutableDictionary *stationStatusDict = [features objectForKey:station[@"station_id"]];
+        NSMutableDictionary *stationStatusDict = [allStations objectForKey:station[@"station_id"]];
         NSMutableDictionary *thisStation = [station mutableCopy];
         [thisStation addEntriesFromDictionary:stationStatusDict];
-        [features setObject:thisStation forKey:station[@"station_id"]];
+        [allStations setObject:thisStation forKey:station[@"station_id"]];
     }
     
     for (NSDictionary *station in stationInfo[@"data"][@"stations"]) {
-        NSMutableDictionary *stationInfoDict = [features objectForKey:station[@"station_id"]];
+        NSMutableDictionary *stationInfoDict = [allStations objectForKey:station[@"station_id"]];
         NSMutableDictionary *thisStation = [station mutableCopy];
         [thisStation addEntriesFromDictionary:stationInfoDict];
-        [features setObject:thisStation forKey:station[@"station_id"]];
+        [allStations setObject:thisStation forKey:station[@"station_id"]];
     }
-    
-    
-    return @{@"HI":@"HI"};
+
+    NSMutableArray *features = [[NSMutableArray alloc] init];
+    for (NSDictionary *station in allStations){
+        NSDictionary *properties = [[NSDictionary alloc] initWithDictionary:allStations[station]];
+        NSDictionary *geometry   = [[NSDictionary alloc] initWithDictionary:
+                                    @{
+                                      @"type": @"Point",
+                                      @"coordinates": @[allStations[station][@"lat"],
+                                                        allStations[station][@"lon"]
+                                                        ]
+                                      }];
+        [features addObject:@{
+                              @"type": @"Feature",
+                              @"properties": properties,
+                              @"geometry": geometry
+                              }];
+    }
+    [geoJSON setObject:features forKey:@"features"];
+
+    return geoJSON;
     
 }
 @end

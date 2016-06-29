@@ -1,8 +1,8 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/gbfs2geojson"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/VVJSONSchemaValidation" "$PODS_CONFIGURATION_BUILD_DIR/gbfs2geojson"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/gbfs2geojson/gbfs2geojson.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "gbfs2geojson"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/VVJSONSchemaValidation/VVJSONSchemaValidation.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/gbfs2geojson/gbfs2geojson.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "VVJSONSchemaValidation" -framework "gbfs2geojson"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

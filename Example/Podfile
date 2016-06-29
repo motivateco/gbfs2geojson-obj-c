@@ -2,5 +2,5 @@ use_frameworks!
 target 'gbfs2geojson_Tests' do
   pod 'gbfs2geojson', :path => '../'
   
-  
+  pod 'VVJSONSchemaValidation'
 end

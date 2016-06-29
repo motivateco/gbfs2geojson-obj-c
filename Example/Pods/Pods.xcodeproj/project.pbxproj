@@ -7,71 +7,246 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24A939285F9C9C10565377904FA5C7A7 /* Pods-gbfs2geojson_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A65207954CD49C8D5329C0BD90D38F6 /* Pods-gbfs2geojson_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73611913CE665975F0A243D6B5C11013 /* GBFSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 312AD4469BC76CB8CEBC1FE18F27DDDE /* GBFSParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91CF48D7BF923F227A5B3BA1D0F0F6BC /* Pods-gbfs2geojson_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E245525F09F0CD77A93EFEEC961609A /* Pods-gbfs2geojson_Tests-dummy.m */; };
-		B666876EC8BCBC8AB7B9E40057DB6B22 /* gbfs2geojson-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECCFC8CAB2A8C4C96176633829612AC /* gbfs2geojson-dummy.m */; };
-		D843638CC2EB338804E8106E2CB6CDE2 /* GBFSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D28FABE5270D09C3B742B4E48AD0AEB0 /* GBFSParser.m */; };
-		EB847B0A48A67AD71A53B695A690E053 /* gbfs2geojson-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82299D751F50D8DEB286533E5F552F2A /* gbfs2geojson-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3E6A34A141488D294209AEA4DACEE81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		FD37197067AAEECF5B485DC6836F57E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		019EC1C0019667A0205FC13215669CE6 /* gbfs2geojson-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B0702B0A384D955434A67D2E2134C1C /* gbfs2geojson-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		035395718EE999A086D0560CE143CCAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		043AB886465AB1D1E035ACCC16FD9AF4 /* VVJSONSchemaArrayItemsValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8D599DD15D6EB2293D003140147BCA /* VVJSONSchemaArrayItemsValidator.m */; };
+		05F040060FB2AFC9CA210062921540F2 /* geoJSONSchema.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EF48FA7E0A6D65F4CA66275E70EFC4B /* geoJSONSchema.json */; };
+		08911C9043FF5C26947C7E9E3A442C40 /* VVJSONSchemaArrayValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F422B81965045A6AD931953FD840915 /* VVJSONSchemaArrayValidator.m */; };
+		08C0F199062DC6DC366EB0C1D0E65B6D /* VVJSONSchema+StandardValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AF3053E58211B771DEFCC49DCE85AD /* VVJSONSchema+StandardValidators.m */; };
+		0E7576CBD70C9B4EDAE88A9DAEAAC99C /* VVJSONSchemaStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 06D64FB2F5DCC24B663529527662D6C3 /* VVJSONSchemaStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1955B8564D7C3B39A2E843261CF2B275 /* VVJSONSchemaNumericValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7341303307D2D1C4B5CCB417E4640E96 /* VVJSONSchemaNumericValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D5E6E881FCD77E289621537F26B2C9C /* VVJSONSchemaErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C811005C8E6B533527C18001ADA241E /* VVJSONSchemaErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2110D4DEA8050E4ED351557771E50F2E /* VVJSONSchemaFormatValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 45703CA3F57288BD87C0D36F96A54B1C /* VVJSONSchemaFormatValidator.m */; };
+		24506F1455627B74FDF65ABEF6A81AEC /* VVJSONSchemaCombiningValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F6950A65A20F24CAA37409E827A45A /* VVJSONSchemaCombiningValidator.m */; };
+		2DB5499878D6BABFD7D2DBF76FE03B75 /* VVJSONSchemaReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B44CE0064ADE94AB018F0A41B1567 /* VVJSONSchemaReference.m */; };
+		2DCD78DB7A122E83FB51C5A4E9400FC7 /* VVJSONSchemaArrayItemsValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = A422264CD43BE32AF70BAF60D0A65A92 /* VVJSONSchemaArrayItemsValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F506C591E59B1FBD8BA2F9DAAC06129 /* VVJSONSchemaDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E0975E8BCA51D3C5A631D0BF297F6FE /* VVJSONSchemaDefinitions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		326E1D45B202EF92FA04F5D79431BF02 /* NSString+VVJSONPointer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1216B38D3271D9AECD2944E0BA4C4B19 /* NSString+VVJSONPointer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		372781F86435DA3B22465E4C75204F62 /* VVJSONSchemaFormatValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 08C5D124FFB086809FA74629A23E14A4 /* VVJSONSchemaFormatValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		373D3E0FBC877535750F3C9BDEF7E234 /* gbfs2geojson_Tests.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 28BADA9D8703D61A9EE3E3B231E51F1E /* gbfs2geojson_Tests.bundle */; };
+		390FAA740A2F07AE1439F204D7BB3E83 /* VVJSONSchemaArrayValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F5865EB027872C3E50D3DB6DD9D070 /* VVJSONSchemaArrayValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B2D576DBCD6414141CB1149F9659325 /* VVJSONSchema+StandardValidators.h in Headers */ = {isa = PBXBuildFile; fileRef = 95DDBCD080498B33D958C531FB83BB43 /* VVJSONSchema+StandardValidators.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C06147157F862DBEC963D2009FCC608 /* station_information.json in Resources */ = {isa = PBXBuildFile; fileRef = 7842639BC790B6A6EA3FB9E2499F3743 /* station_information.json */; };
+		400E203523683CC5B67348898A6584ED /* VVJSONSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = D753B64895F3B246101CCB9915E69FA1 /* VVJSONSchema.m */; };
+		43AEE8DC4964CF54E6761F3282A57D8D /* VVJSONSchemaTypeValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CEFCA555697E401259FC1BF90720C7 /* VVJSONSchemaTypeValidator.m */; };
+		43B2E19D9ABC4EA6488EE4498436160E /* station_status.json in Resources */ = {isa = PBXBuildFile; fileRef = 62F1034A0252F14CCF81A08387D27C98 /* station_status.json */; };
+		4691EF2084ABFF15E257B9B581EF0255 /* VVJSONSchemaStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4935A3C951DE1733DA11F7EB1C31B /* VVJSONSchemaStorage.m */; };
+		4BD3C032D7F423344E126688FB2DB324 /* NSArray+VVJSONComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = A71409AA86DB19231C4B6F4F794992B6 /* NSArray+VVJSONComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E004DD3B0DAB0528E73A08E91B32458 /* GBFSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEC48AEA5D13A53E0D37297CF702B22 /* GBFSParser.m */; };
+		4FC8A617C28D5CF2FEA6ABB2786A8457 /* NSString+VVJSONPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 218A6AF17F770FC2697EE849BBEFFDEA /* NSString+VVJSONPointer.m */; };
+		521CFB5764AE88C484237866D62B67E3 /* VVJSONSchemaTypeValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E7D431378FEFE53A1991950261531B /* VVJSONSchemaTypeValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5626A921A99638D8FB287A10EEB6FB55 /* VVJSONSchemaErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A0037B99346E796250659CF44418DE /* VVJSONSchemaErrors.m */; };
+		58A47B115B2EFFB6D94B53D4FC66ACCA /* VVJSONSchemaObjectValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 985AAACABBE18AA554D758773E41F215 /* VVJSONSchemaObjectValidator.m */; };
+		5AADE3A768B8727CA47855F36658CAFD /* NSArray+VVJSONComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D352C31C0C7BD57B8B92D09EF79645 /* NSArray+VVJSONComparison.m */; };
+		5B65F3073EFC6AFBB3AFF5E525F54F0A /* VVJSONSchemaValidationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = A871E4A9650330A22BF3DEF3E81B4D96 /* VVJSONSchemaValidationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		607ACC5432AFD8673EE45986195C4C94 /* VVJSONSchemaDependenciesValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = A54FC113F22EBB5FB6CEBFA4C21804D9 /* VVJSONSchemaDependenciesValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6300DB4D70DA26710D23C31CCBC989E6 /* NSObject+VVJSONComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B5275DE8DB9FDBAD74A3EECD8ECDC4F /* NSObject+VVJSONComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64A13204F138FD533098DA26C512FB94 /* VVJSONSchemaDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A21A216C708E154D1D916F90AA698BC /* VVJSONSchemaDefinitions.m */; };
+		64EAA171D8AC5B191852160E0CD174FB /* VVJSONSchemaValidationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900D65CB3744AEEDEC75B2ED55BA262 /* VVJSONSchemaValidationContext.m */; };
+		6AE2985B510B8CF93E9F3B790EED1193 /* VVJSONSchemaValidation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF1416BD9D5ABF88B7D0F488F1670CE /* VVJSONSchemaValidation-dummy.m */; };
+		6CE1434F1CC0EBD86ADF4657CCABDB7D /* Pods-gbfs2geojson_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A65207954CD49C8D5329C0BD90D38F6 /* Pods-gbfs2geojson_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D1F4E1DE88C5DDC1BB937DF94928B8E /* NSDictionary+VVJSONComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A033E04C2DAC6440B7EF64A8064F2E0 /* NSDictionary+VVJSONComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		711990C50781E8FEFCCC16B3B4C22405 /* VVJSONSchemaFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7C53C33CC738F417518A5035D8FB04 /* VVJSONSchemaFactory.m */; };
+		7BD8DCE6D75DF4F0A0BBE28F6461B2AB /* VVJSONSchemaObjectValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A3F6F3938F2589DABE417054575AE4 /* VVJSONSchemaObjectValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		845251C294CA0457C3E1F86EF53C44F3 /* VVJSONSchemaNumericValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CAF3FC8D146069CEA749A090248F64 /* VVJSONSchemaNumericValidator.m */; };
+		84AD0461EB1DA44E4D27D27BB62F76AB /* VVJSONSchemaValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E3C1D3258697C78ABCC5027476EB2E /* VVJSONSchemaValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8918097D201F9BB82A1C459A0FB552BE /* VVJSONSchemaEnumValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8520EB97BE76E2DD3F7D610AE43B4E50 /* VVJSONSchemaEnumValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B4A5A708CA2D97E0B27F405E4BD4588 /* VVJSONSchemaStringValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FE07F2F43578376F6B5F8E40FD52B4B /* VVJSONSchemaStringValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		959FA1E90C0DFC3F16DA470BC8293063 /* VVJSONSchemaCombiningValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 92957CE0F3587F6AC8D9D592AE475615 /* VVJSONSchemaCombiningValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97815D4313A007C81013BB8BDC4C9836 /* gbfs2geojson.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = FDEC2E038F6D7DEDA1CFB545FA7DAABD /* gbfs2geojson.podspec.json */; };
+		9BBD8C1520C41B0A2620FC3D703A1C90 /* NSNumber+VVJSONNumberTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D87C11DC69CD612CCDE25453009A713F /* NSNumber+VVJSONNumberTypes.m */; };
+		9C08D98AC10D9884C56EE04D05E19146 /* VVJSONSchemaReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 12579EBC3DE3F1321C6E49E3BC3FA4F4 /* VVJSONSchemaReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2517B4D92FC3B51FCFE9E088665655 /* VVJSONSchemaObjectPropertiesValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = CF410FD1C5773701E1BB94F8F5872490 /* VVJSONSchemaObjectPropertiesValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A900BE0264F838354B5A6B63484AD475 /* VVJSONSchemaDependenciesValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 028DF5963D873BFABCBCAD4242EC95F7 /* VVJSONSchemaDependenciesValidator.m */; };
+		AEBC36CE1011DF5BD8D1BFCE1A2F17BB /* VVJSONSchemaStringValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEE71B83BA00830FB83198F6237227 /* VVJSONSchemaStringValidator.m */; };
+		B27839906689EB8BFD39D7A62B6AC8FC /* Pods-gbfs2geojson_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E245525F09F0CD77A93EFEEC961609A /* Pods-gbfs2geojson_Tests-dummy.m */; };
+		B824C49E73342EB6D8173BE428A8F3B5 /* VVJSONSchemaObjectPropertiesValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE3837E48F146D0557A2FAC1DB657B /* VVJSONSchemaObjectPropertiesValidator.m */; };
+		BC1A736C07E133DBEC8F576BAB0A4E44 /* VVJSONSchemaValidation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A40FF993C45A3BD5B2C8F7A5A329AF /* VVJSONSchemaValidation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE7D53A9920EA34DB13D8618C788CF49 /* NSURL+VVJSONReferencing.h in Headers */ = {isa = PBXBuildFile; fileRef = 388949030CECC36AB8ABFF38A5A39C60 /* NSURL+VVJSONReferencing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C851539E4CA5AE8D1835E8DB2E07A816 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		D1777C154A19782B43A68EBFD9A164D0 /* VVJSONSchemaEnumValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 763173524A75EF8EE9C97D3BE70A7C08 /* VVJSONSchemaEnumValidator.m */; };
+		D50006FB32728C297E4B4EF5810EAB42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		E7F358B7A47B4E4E72603B116EEF9E14 /* gbfs2geojson-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D019A6B87F65783862B247C65C16787 /* gbfs2geojson-dummy.m */; };
+		EA95353A7F0613D55D4CEF6DD0B0955E /* GBFSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EA780F81388A16C0B7E3C2C32AF18A /* GBFSParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC9370C12A91249C3A31E9190F2D9A7B /* NSNumber+VVJSONNumberTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B0615BA81D05F19DF466C3D8DB9C543 /* NSNumber+VVJSONNumberTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED6B973AF3043822693DD2727A0F057D /* VVJSONSchemaFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 16782504564FE4FCA8D0A5AFBA8A3180 /* VVJSONSchemaFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE7083B84BF8A72E6FF007B287B1780D /* NSDictionary+VVJSONComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAEFD5321639F4407D475B6A1EF1 /* NSDictionary+VVJSONComparison.m */; };
+		F0730B13A2A520B4797249F18C5FF5FB /* NSURL+VVJSONReferencing.m in Sources */ = {isa = PBXBuildFile; fileRef = C3606F45B06EC78DD3CF2625E12F6EA5 /* NSURL+VVJSONReferencing.m */; };
+		F230CAC2A65C36A1C7832EC11F3C244C /* VVJSONSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 924967FC9A2FC3555A1E4B9139AE2FCA /* VVJSONSchema.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F78953D396F435D00081DF90431B0D01 /* NSObject+VVJSONComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C22180CADD1D154CE0039965FA68C /* NSObject+VVJSONComparison.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CD2F620564CCC0A600B150FA369A71AC /* PBXContainerItemProxy */ = {
+		61C9E9D1158B6AC7D44A95BF5CA37B41 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2B89EC64189E265FA882EB29B79176B9;
+			remoteGlobalIDString = 7CA536C2648CF3FCD0E3070B0573D3B9;
 			remoteInfo = gbfs2geojson;
+		};
+		7A293EAA4AD13D7F37ECF8418C7B93B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8FF144C312E94B7358C0F5FEA400B7F;
+			remoteInfo = "gbfs2geojson-gbfs2geojson_Tests";
+		};
+		FEE0F641D7CFF39828D2CFFBD4B2F22D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B861E270740995CC9C42D8619127D424;
+			remoteInfo = VVJSONSchemaValidation;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		028DF5963D873BFABCBCAD4242EC95F7 /* VVJSONSchemaDependenciesValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaDependenciesValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaDependenciesValidator.m; sourceTree = "<group>"; };
+		06D64FB2F5DCC24B663529527662D6C3 /* VVJSONSchemaStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaStorage.h; path = VVJSONSchemaValidation/VVJSONSchemaStorage.h; sourceTree = "<group>"; };
+		07F5865EB027872C3E50D3DB6DD9D070 /* VVJSONSchemaArrayValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaArrayValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaArrayValidator.h; sourceTree = "<group>"; };
+		08782D516221A4AB1D699BF2ABD9537A /* gbfs2geojson.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = gbfs2geojson.xcconfig; sourceTree = "<group>"; };
+		08C5D124FFB086809FA74629A23E14A4 /* VVJSONSchemaFormatValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaFormatValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaFormatValidator.h; sourceTree = "<group>"; };
+		0C1C22180CADD1D154CE0039965FA68C /* NSObject+VVJSONComparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+VVJSONComparison.m"; path = "VVJSONSchemaValidation/NSObject+VVJSONComparison.m"; sourceTree = "<group>"; };
+		0FD0E84AE76EA2BA7DAB7FD05D47590F /* VVJSONSchemaValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VVJSONSchemaValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF1416BD9D5ABF88B7D0F488F1670CE /* VVJSONSchemaValidation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VVJSONSchemaValidation-dummy.m"; sourceTree = "<group>"; };
+		10E53131655A4BA307ED5A62A13FACA0 /* gbfs2geojson.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = gbfs2geojson.modulemap; sourceTree = "<group>"; };
+		1216B38D3271D9AECD2944E0BA4C4B19 /* NSString+VVJSONPointer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+VVJSONPointer.h"; path = "VVJSONSchemaValidation/NSString+VVJSONPointer.h"; sourceTree = "<group>"; };
+		12579EBC3DE3F1321C6E49E3BC3FA4F4 /* VVJSONSchemaReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaReference.h; path = VVJSONSchemaValidation/VVJSONSchemaReference.h; sourceTree = "<group>"; };
 		148E6D5E80357DC9BB0DCAD763ED91A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16782504564FE4FCA8D0A5AFBA8A3180 /* VVJSONSchemaFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaFactory.h; path = VVJSONSchemaValidation/VVJSONSchemaFactory.h; sourceTree = "<group>"; };
 		1B327702E602DC6AF1B835D56240D199 /* Pods-gbfs2geojson_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-gbfs2geojson_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		1D4FE163027DB2F0F336134DFDF61AF1 /* Pods_gbfs2geojson_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gbfs2geojson_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FB0192699A1BD49CE9D6224B1EB207B /* gbfs2geojson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = gbfs2geojson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C811005C8E6B533527C18001ADA241E /* VVJSONSchemaErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaErrors.h; path = VVJSONSchemaValidation/VVJSONSchemaErrors.h; sourceTree = "<group>"; };
+		1E0975E8BCA51D3C5A631D0BF297F6FE /* VVJSONSchemaDefinitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaDefinitions.h; path = VVJSONSchemaValidation/VVJSONSchemaDefinitions.h; sourceTree = "<group>"; };
+		218A6AF17F770FC2697EE849BBEFFDEA /* NSString+VVJSONPointer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+VVJSONPointer.m"; path = "VVJSONSchemaValidation/NSString+VVJSONPointer.m"; sourceTree = "<group>"; };
+		28BADA9D8703D61A9EE3E3B231E51F1E /* gbfs2geojson_Tests.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gbfs2geojson_Tests.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E245525F09F0CD77A93EFEEC961609A /* Pods-gbfs2geojson_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-gbfs2geojson_Tests-dummy.m"; sourceTree = "<group>"; };
-		312AD4469BC76CB8CEBC1FE18F27DDDE /* GBFSParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GBFSParser.h; sourceTree = "<group>"; };
-		37B47E76B0914743A8179774609C449B /* gbfs2geojson.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = gbfs2geojson.xcconfig; sourceTree = "<group>"; };
+		37A40FF993C45A3BD5B2C8F7A5A329AF /* VVJSONSchemaValidation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VVJSONSchemaValidation-umbrella.h"; sourceTree = "<group>"; };
+		388949030CECC36AB8ABFF38A5A39C60 /* NSURL+VVJSONReferencing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+VVJSONReferencing.h"; path = "VVJSONSchemaValidation/NSURL+VVJSONReferencing.h"; sourceTree = "<group>"; };
+		3968496EB2699846F53C90A49632FCE8 /* gbfs2geojson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = gbfs2geojson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D019A6B87F65783862B247C65C16787 /* gbfs2geojson-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "gbfs2geojson-dummy.m"; sourceTree = "<group>"; };
+		45703CA3F57288BD87C0D36F96A54B1C /* VVJSONSchemaFormatValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaFormatValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaFormatValidator.m; sourceTree = "<group>"; };
+		49A3F6F3938F2589DABE417054575AE4 /* VVJSONSchemaObjectValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaObjectValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaObjectValidator.h; sourceTree = "<group>"; };
 		4A65207954CD49C8D5329C0BD90D38F6 /* Pods-gbfs2geojson_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-gbfs2geojson_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4EDEE71B83BA00830FB83198F6237227 /* VVJSONSchemaStringValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaStringValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaStringValidator.m; sourceTree = "<group>"; };
+		52EA780F81388A16C0B7E3C2C32AF18A /* GBFSParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GBFSParser.h; sourceTree = "<group>"; };
+		5900D65CB3744AEEDEC75B2ED55BA262 /* VVJSONSchemaValidationContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaValidationContext.m; path = VVJSONSchemaValidation/VVJSONSchemaValidationContext.m; sourceTree = "<group>"; };
+		5A21A216C708E154D1D916F90AA698BC /* VVJSONSchemaDefinitions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaDefinitions.m; path = VVJSONSchemaValidation/VVJSONSchemaDefinitions.m; sourceTree = "<group>"; };
+		5B0615BA81D05F19DF466C3D8DB9C543 /* NSNumber+VVJSONNumberTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+VVJSONNumberTypes.h"; path = "VVJSONSchemaValidation/NSNumber+VVJSONNumberTypes.h"; sourceTree = "<group>"; };
+		5B0702B0A384D955434A67D2E2134C1C /* gbfs2geojson-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "gbfs2geojson-umbrella.h"; sourceTree = "<group>"; };
+		5FE07F2F43578376F6B5F8E40FD52B4B /* VVJSONSchemaStringValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaStringValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaStringValidator.h; sourceTree = "<group>"; };
+		5FE4935A3C951DE1733DA11F7EB1C31B /* VVJSONSchemaStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaStorage.m; path = VVJSONSchemaValidation/VVJSONSchemaStorage.m; sourceTree = "<group>"; };
+		62F1034A0252F14CCF81A08387D27C98 /* station_status.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = station_status.json; sourceTree = "<group>"; };
+		6B5275DE8DB9FDBAD74A3EECD8ECDC4F /* NSObject+VVJSONComparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+VVJSONComparison.h"; path = "VVJSONSchemaValidation/NSObject+VVJSONComparison.h"; sourceTree = "<group>"; };
+		6EF48FA7E0A6D65F4CA66275E70EFC4B /* geoJSONSchema.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = geoJSONSchema.json; sourceTree = "<group>"; };
 		71F978556AD8AA595B6DEA81A61BC529 /* Pods-gbfs2geojson_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-gbfs2geojson_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		82299D751F50D8DEB286533E5F552F2A /* gbfs2geojson-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "gbfs2geojson-umbrella.h"; sourceTree = "<group>"; };
+		7341303307D2D1C4B5CCB417E4640E96 /* VVJSONSchemaNumericValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaNumericValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaNumericValidator.h; sourceTree = "<group>"; };
+		75E7D431378FEFE53A1991950261531B /* VVJSONSchemaTypeValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaTypeValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaTypeValidator.h; sourceTree = "<group>"; };
+		763173524A75EF8EE9C97D3BE70A7C08 /* VVJSONSchemaEnumValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaEnumValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaEnumValidator.m; sourceTree = "<group>"; };
+		7842639BC790B6A6EA3FB9E2499F3743 /* station_information.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = station_information.json; sourceTree = "<group>"; };
+		7F422B81965045A6AD931953FD840915 /* VVJSONSchemaArrayValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaArrayValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaArrayValidator.m; sourceTree = "<group>"; };
+		82A0037B99346E796250659CF44418DE /* VVJSONSchemaErrors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaErrors.m; path = VVJSONSchemaValidation/VVJSONSchemaErrors.m; sourceTree = "<group>"; };
+		82AF3053E58211B771DEFCC49DCE85AD /* VVJSONSchema+StandardValidators.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "VVJSONSchema+StandardValidators.m"; path = "VVJSONSchemaValidation/VVJSONSchema+StandardValidators.m"; sourceTree = "<group>"; };
+		82F6950A65A20F24CAA37409E827A45A /* VVJSONSchemaCombiningValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaCombiningValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaCombiningValidator.m; sourceTree = "<group>"; };
+		8520EB97BE76E2DD3F7D610AE43B4E50 /* VVJSONSchemaEnumValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaEnumValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaEnumValidator.h; sourceTree = "<group>"; };
+		8A033E04C2DAC6440B7EF64A8064F2E0 /* NSDictionary+VVJSONComparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+VVJSONComparison.h"; path = "VVJSONSchemaValidation/NSDictionary+VVJSONComparison.h"; sourceTree = "<group>"; };
+		8BEE3837E48F146D0557A2FAC1DB657B /* VVJSONSchemaObjectPropertiesValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaObjectPropertiesValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaObjectPropertiesValidator.m; sourceTree = "<group>"; };
+		8D7C53C33CC738F417518A5035D8FB04 /* VVJSONSchemaFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaFactory.m; path = VVJSONSchemaValidation/VVJSONSchemaFactory.m; sourceTree = "<group>"; };
+		924967FC9A2FC3555A1E4B9139AE2FCA /* VVJSONSchema.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchema.h; path = VVJSONSchemaValidation/VVJSONSchema.h; sourceTree = "<group>"; };
+		92957CE0F3587F6AC8D9D592AE475615 /* VVJSONSchemaCombiningValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaCombiningValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaCombiningValidator.h; sourceTree = "<group>"; };
+		9372CAEFD5321639F4407D475B6A1EF1 /* NSDictionary+VVJSONComparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+VVJSONComparison.m"; path = "VVJSONSchemaValidation/NSDictionary+VVJSONComparison.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9ECCFC8CAB2A8C4C96176633829612AC /* gbfs2geojson-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "gbfs2geojson-dummy.m"; sourceTree = "<group>"; };
+		93E3C1D3258697C78ABCC5027476EB2E /* VVJSONSchemaValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaValidator.h; sourceTree = "<group>"; };
+		940B44CE0064ADE94AB018F0A41B1567 /* VVJSONSchemaReference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaReference.m; path = VVJSONSchemaValidation/VVJSONSchemaReference.m; sourceTree = "<group>"; };
+		95DDBCD080498B33D958C531FB83BB43 /* VVJSONSchema+StandardValidators.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "VVJSONSchema+StandardValidators.h"; path = "VVJSONSchemaValidation/VVJSONSchema+StandardValidators.h"; sourceTree = "<group>"; };
+		985AAACABBE18AA554D758773E41F215 /* VVJSONSchemaObjectValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaObjectValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaObjectValidator.m; sourceTree = "<group>"; };
+		A1D352C31C0C7BD57B8B92D09EF79645 /* NSArray+VVJSONComparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+VVJSONComparison.m"; path = "VVJSONSchemaValidation/NSArray+VVJSONComparison.m"; sourceTree = "<group>"; };
+		A422264CD43BE32AF70BAF60D0A65A92 /* VVJSONSchemaArrayItemsValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaArrayItemsValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaArrayItemsValidator.h; sourceTree = "<group>"; };
+		A54FC113F22EBB5FB6CEBFA4C21804D9 /* VVJSONSchemaDependenciesValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaDependenciesValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaDependenciesValidator.h; sourceTree = "<group>"; };
+		A71409AA86DB19231C4B6F4F794992B6 /* NSArray+VVJSONComparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+VVJSONComparison.h"; path = "VVJSONSchemaValidation/NSArray+VVJSONComparison.h"; sourceTree = "<group>"; };
+		A871E4A9650330A22BF3DEF3E81B4D96 /* VVJSONSchemaValidationContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaValidationContext.h; path = VVJSONSchemaValidation/VVJSONSchemaValidationContext.h; sourceTree = "<group>"; };
 		A915334141219D6D52776802ADEA003D /* Pods-gbfs2geojson_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-gbfs2geojson_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AC0D846DDF6AB382977ACAA69B04630C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC66D08BC7F8BF82C44CA5A231F8AFCA /* Pods-gbfs2geojson_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-gbfs2geojson_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AC7DA220FAA9073452DDAAADAD87B092 /* gbfs2geojson-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "gbfs2geojson-prefix.pch"; sourceTree = "<group>"; };
+		B089156E3BD3A8B8D3AFB2783113D031 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7CAF3FC8D146069CEA749A090248F64 /* VVJSONSchemaNumericValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaNumericValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaNumericValidator.m; sourceTree = "<group>"; };
 		BA2A9C3CF45EF8759AE2EE4A1F9C7FFA /* Pods-gbfs2geojson_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-gbfs2geojson_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA8D599DD15D6EB2293D003140147BCA /* VVJSONSchemaArrayItemsValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaArrayItemsValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaArrayItemsValidator.m; sourceTree = "<group>"; };
+		BEFA362DD08D5F43192BCA7D3B20FAA2 /* Pods_gbfs2geojson_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gbfs2geojson_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3606F45B06EC78DD3CF2625E12F6EA5 /* NSURL+VVJSONReferencing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+VVJSONReferencing.m"; path = "VVJSONSchemaValidation/NSURL+VVJSONReferencing.m"; sourceTree = "<group>"; };
+		C643F670344130A9405A116E138963AA /* VVJSONSchemaValidation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VVJSONSchemaValidation-prefix.pch"; sourceTree = "<group>"; };
+		C775574C8703331EB1754466F3EF834F /* VVJSONSchemaValidation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VVJSONSchemaValidation.modulemap; sourceTree = "<group>"; };
+		CD87D3C840D395DF3AF8024D2CEEB8FB /* VVJSONSchemaValidation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VVJSONSchemaValidation.xcconfig; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D28FABE5270D09C3B742B4E48AD0AEB0 /* GBFSParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GBFSParser.m; sourceTree = "<group>"; };
+		CF410FD1C5773701E1BB94F8F5872490 /* VVJSONSchemaObjectPropertiesValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VVJSONSchemaObjectPropertiesValidator.h; path = VVJSONSchemaValidation/VVJSONSchemaObjectPropertiesValidator.h; sourceTree = "<group>"; };
+		D3CEFCA555697E401259FC1BF90720C7 /* VVJSONSchemaTypeValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchemaTypeValidator.m; path = VVJSONSchemaValidation/VVJSONSchemaTypeValidator.m; sourceTree = "<group>"; };
+		D753B64895F3B246101CCB9915E69FA1 /* VVJSONSchema.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VVJSONSchema.m; path = VVJSONSchemaValidation/VVJSONSchema.m; sourceTree = "<group>"; };
+		D87C11DC69CD612CCDE25453009A713F /* NSNumber+VVJSONNumberTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+VVJSONNumberTypes.m"; path = "VVJSONSchemaValidation/NSNumber+VVJSONNumberTypes.m"; sourceTree = "<group>"; };
 		DA995067F2802BC4EA6F1541AE8E0E2F /* Pods-gbfs2geojson_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-gbfs2geojson_Tests.modulemap"; sourceTree = "<group>"; };
-		E2F1525394CBFEB033D1D673EB0BA080 /* gbfs2geojson.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = gbfs2geojson.modulemap; sourceTree = "<group>"; };
+		DDEC48AEA5D13A53E0D37297CF702B22 /* GBFSParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GBFSParser.m; sourceTree = "<group>"; };
+		DFE06F909858D69BA2013E33E78EB405 /* ResourceBundle-gbfs2geojson_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-gbfs2geojson_Tests-Info.plist"; sourceTree = "<group>"; };
 		ED8298A8B09C6BABEACA2EBE3BBDB5FC /* Pods-gbfs2geojson_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-gbfs2geojson_Tests-resources.sh"; sourceTree = "<group>"; };
-		EE52DAC70EAF74B4D2E1F84D42AF4C6E /* gbfs2geojson-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "gbfs2geojson-prefix.pch"; sourceTree = "<group>"; };
+		EFB008D07158AA862091374AA2E88AAD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDEC2E038F6D7DEDA1CFB545FA7DAABD /* gbfs2geojson.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = gbfs2geojson.podspec.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		69875BC5E5B2EA52DADBA12FC12D3006 /* Frameworks */ = {
+		5A757DFA7907E83CEE997767CEA91530 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD37197067AAEECF5B485DC6836F57E1 /* Foundation.framework in Frameworks */,
+				D50006FB32728C297E4B4EF5810EAB42 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76931D83E2BCC1292E10426B9B32300E /* Frameworks */ = {
+		62940F71A3450755BD0EC2011B840DF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3E6A34A141488D294209AEA4DACEE81 /* Foundation.framework in Frameworks */,
+				035395718EE999A086D0560CE143CCAF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0566BD772216A73F17A328CEEBA24D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C851539E4CA5AE8D1835E8DB2E07A816 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FDC28BC8387C18CA1573F9193A81686 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ABE274A2B34E27B3A6DAEAB50816EBE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFB008D07158AA862091374AA2E88AAD /* Info.plist */,
+				C775574C8703331EB1754466F3EF834F /* VVJSONSchemaValidation.modulemap */,
+				CD87D3C840D395DF3AF8024D2CEEB8FB /* VVJSONSchemaValidation.xcconfig */,
+				0FF1416BD9D5ABF88B7D0F488F1670CE /* VVJSONSchemaValidation-dummy.m */,
+				C643F670344130A9405A116E138963AA /* VVJSONSchemaValidation-prefix.pch */,
+				37A40FF993C45A3BD5B2C8F7A5A329AF /* VVJSONSchemaValidation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VVJSONSchemaValidation";
+			sourceTree = "<group>";
+		};
+		13B3E546C98F5D593FA5768A0743E13D /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				6D9A22F086D320F07006059AB5B49BF1 /* Pods */,
+				91CCADE7DB651A961981FA04991396F9 /* Tests */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		2FDF9C320544CD8591F8466AD3FE47AB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,42 +263,118 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		3F2F7039797D94D96407FE16EB08D2DF /* gbfs2geojson */ = {
+		6D9A22F086D320F07006059AB5B49BF1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9A1C58D7EC43B3A4E7BCCAE5B30A7F83 /* Classes */,
+				8637FA551B0A1A17C703210103AE8205 /* Local Podspecs */,
 			);
-			path = gbfs2geojson;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		796C55529041E895D99D5C65FE79F53D /* gbfs2geojson */ = {
+		73B7924AA05BB900F72E3AB3162BEC2C /* VVJSONSchemaValidation */ = {
 			isa = PBXGroup;
 			children = (
-				3F2F7039797D94D96407FE16EB08D2DF /* gbfs2geojson */,
-				E9188BBE3DD2B03C79D4AE475942FBE7 /* Support Files */,
+				A71409AA86DB19231C4B6F4F794992B6 /* NSArray+VVJSONComparison.h */,
+				A1D352C31C0C7BD57B8B92D09EF79645 /* NSArray+VVJSONComparison.m */,
+				8A033E04C2DAC6440B7EF64A8064F2E0 /* NSDictionary+VVJSONComparison.h */,
+				9372CAEFD5321639F4407D475B6A1EF1 /* NSDictionary+VVJSONComparison.m */,
+				5B0615BA81D05F19DF466C3D8DB9C543 /* NSNumber+VVJSONNumberTypes.h */,
+				D87C11DC69CD612CCDE25453009A713F /* NSNumber+VVJSONNumberTypes.m */,
+				6B5275DE8DB9FDBAD74A3EECD8ECDC4F /* NSObject+VVJSONComparison.h */,
+				0C1C22180CADD1D154CE0039965FA68C /* NSObject+VVJSONComparison.m */,
+				1216B38D3271D9AECD2944E0BA4C4B19 /* NSString+VVJSONPointer.h */,
+				218A6AF17F770FC2697EE849BBEFFDEA /* NSString+VVJSONPointer.m */,
+				388949030CECC36AB8ABFF38A5A39C60 /* NSURL+VVJSONReferencing.h */,
+				C3606F45B06EC78DD3CF2625E12F6EA5 /* NSURL+VVJSONReferencing.m */,
+				924967FC9A2FC3555A1E4B9139AE2FCA /* VVJSONSchema.h */,
+				D753B64895F3B246101CCB9915E69FA1 /* VVJSONSchema.m */,
+				95DDBCD080498B33D958C531FB83BB43 /* VVJSONSchema+StandardValidators.h */,
+				82AF3053E58211B771DEFCC49DCE85AD /* VVJSONSchema+StandardValidators.m */,
+				A422264CD43BE32AF70BAF60D0A65A92 /* VVJSONSchemaArrayItemsValidator.h */,
+				BA8D599DD15D6EB2293D003140147BCA /* VVJSONSchemaArrayItemsValidator.m */,
+				07F5865EB027872C3E50D3DB6DD9D070 /* VVJSONSchemaArrayValidator.h */,
+				7F422B81965045A6AD931953FD840915 /* VVJSONSchemaArrayValidator.m */,
+				92957CE0F3587F6AC8D9D592AE475615 /* VVJSONSchemaCombiningValidator.h */,
+				82F6950A65A20F24CAA37409E827A45A /* VVJSONSchemaCombiningValidator.m */,
+				1E0975E8BCA51D3C5A631D0BF297F6FE /* VVJSONSchemaDefinitions.h */,
+				5A21A216C708E154D1D916F90AA698BC /* VVJSONSchemaDefinitions.m */,
+				A54FC113F22EBB5FB6CEBFA4C21804D9 /* VVJSONSchemaDependenciesValidator.h */,
+				028DF5963D873BFABCBCAD4242EC95F7 /* VVJSONSchemaDependenciesValidator.m */,
+				8520EB97BE76E2DD3F7D610AE43B4E50 /* VVJSONSchemaEnumValidator.h */,
+				763173524A75EF8EE9C97D3BE70A7C08 /* VVJSONSchemaEnumValidator.m */,
+				1C811005C8E6B533527C18001ADA241E /* VVJSONSchemaErrors.h */,
+				82A0037B99346E796250659CF44418DE /* VVJSONSchemaErrors.m */,
+				16782504564FE4FCA8D0A5AFBA8A3180 /* VVJSONSchemaFactory.h */,
+				8D7C53C33CC738F417518A5035D8FB04 /* VVJSONSchemaFactory.m */,
+				08C5D124FFB086809FA74629A23E14A4 /* VVJSONSchemaFormatValidator.h */,
+				45703CA3F57288BD87C0D36F96A54B1C /* VVJSONSchemaFormatValidator.m */,
+				7341303307D2D1C4B5CCB417E4640E96 /* VVJSONSchemaNumericValidator.h */,
+				B7CAF3FC8D146069CEA749A090248F64 /* VVJSONSchemaNumericValidator.m */,
+				CF410FD1C5773701E1BB94F8F5872490 /* VVJSONSchemaObjectPropertiesValidator.h */,
+				8BEE3837E48F146D0557A2FAC1DB657B /* VVJSONSchemaObjectPropertiesValidator.m */,
+				49A3F6F3938F2589DABE417054575AE4 /* VVJSONSchemaObjectValidator.h */,
+				985AAACABBE18AA554D758773E41F215 /* VVJSONSchemaObjectValidator.m */,
+				12579EBC3DE3F1321C6E49E3BC3FA4F4 /* VVJSONSchemaReference.h */,
+				940B44CE0064ADE94AB018F0A41B1567 /* VVJSONSchemaReference.m */,
+				06D64FB2F5DCC24B663529527662D6C3 /* VVJSONSchemaStorage.h */,
+				5FE4935A3C951DE1733DA11F7EB1C31B /* VVJSONSchemaStorage.m */,
+				5FE07F2F43578376F6B5F8E40FD52B4B /* VVJSONSchemaStringValidator.h */,
+				4EDEE71B83BA00830FB83198F6237227 /* VVJSONSchemaStringValidator.m */,
+				75E7D431378FEFE53A1991950261531B /* VVJSONSchemaTypeValidator.h */,
+				D3CEFCA555697E401259FC1BF90720C7 /* VVJSONSchemaTypeValidator.m */,
+				A871E4A9650330A22BF3DEF3E81B4D96 /* VVJSONSchemaValidationContext.h */,
+				5900D65CB3744AEEDEC75B2ED55BA262 /* VVJSONSchemaValidationContext.m */,
+				93E3C1D3258697C78ABCC5027476EB2E /* VVJSONSchemaValidator.h */,
+				0ABE274A2B34E27B3A6DAEAB50816EBE /* Support Files */,
 			);
-			name = gbfs2geojson;
-			path = ../..;
+			path = VVJSONSchemaValidation;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				AC4910A164E52E20A4681E0F57F08D54 /* Development Pods */,
+				ADE31275E798C634281125A4C7AD6774 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A80ACE457C7D3CF2D0567694188BA324 /* Products */,
+				AF46841F0E754963836E344621950AA7 /* Pods */,
+				DE9AB0CB689BA3DA5F38E9E92463C8EE /* Products */,
 				2FDF9C320544CD8591F8466AD3FE47AB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9A1C58D7EC43B3A4E7BCCAE5B30A7F83 /* Classes */ = {
+		808C56C659DE8C56EDA727FB53C1DDEE /* gbfs2geojson */ = {
 			isa = PBXGroup;
 			children = (
-				312AD4469BC76CB8CEBC1FE18F27DDDE /* GBFSParser.h */,
-				D28FABE5270D09C3B742B4E48AD0AEB0 /* GBFSParser.m */,
+				82BCA22F4A31E1D72A7C815180AE1B58 /* Classes */,
+			);
+			path = gbfs2geojson;
+			sourceTree = "<group>";
+		};
+		82BCA22F4A31E1D72A7C815180AE1B58 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				52EA780F81388A16C0B7E3C2C32AF18A /* GBFSParser.h */,
+				DDEC48AEA5D13A53E0D37297CF702B22 /* GBFSParser.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		8637FA551B0A1A17C703210103AE8205 /* Local Podspecs */ = {
+			isa = PBXGroup;
+			children = (
+				FDEC2E038F6D7DEDA1CFB545FA7DAABD /* gbfs2geojson.podspec.json */,
+			);
+			path = "Local Podspecs";
+			sourceTree = "<group>";
+		};
+		91CCADE7DB651A961981FA04991396F9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6EF48FA7E0A6D65F4CA66275E70EFC4B /* geoJSONSchema.json */,
+				7842639BC790B6A6EA3FB9E2499F3743 /* station_information.json */,
+				62F1034A0252F14CCF81A08387D27C98 /* station_status.json */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		9C6D7AAC9D1B38DBF1D9620539F98B81 /* Pods-gbfs2geojson_Tests */ = {
@@ -144,21 +395,46 @@
 			path = "Target Support Files/Pods-gbfs2geojson_Tests";
 			sourceTree = "<group>";
 		};
-		A80ACE457C7D3CF2D0567694188BA324 /* Products */ = {
+		A58D5DC5555AE2C0BA4E46A72579AC8D /* gbfs2geojson */ = {
 			isa = PBXGroup;
 			children = (
-				1FB0192699A1BD49CE9D6224B1EB207B /* gbfs2geojson.framework */,
-				1D4FE163027DB2F0F336134DFDF61AF1 /* Pods_gbfs2geojson_Tests.framework */,
+				808C56C659DE8C56EDA727FB53C1DDEE /* gbfs2geojson */,
+				CAD75C38624007912EBF55FB00E1A137 /* Resources */,
+				B1F2202A0991259BB61AFD8629CFA5AD /* Support Files */,
 			);
-			name = Products;
+			name = gbfs2geojson;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		AC4910A164E52E20A4681E0F57F08D54 /* Development Pods */ = {
+		ADE31275E798C634281125A4C7AD6774 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				796C55529041E895D99D5C65FE79F53D /* gbfs2geojson */,
+				A58D5DC5555AE2C0BA4E46A72579AC8D /* gbfs2geojson */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		AF46841F0E754963836E344621950AA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73B7924AA05BB900F72E3AB3162BEC2C /* VVJSONSchemaValidation */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B1F2202A0991259BB61AFD8629CFA5AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				10E53131655A4BA307ED5A62A13FACA0 /* gbfs2geojson.modulemap */,
+				08782D516221A4AB1D699BF2ABD9537A /* gbfs2geojson.xcconfig */,
+				3D019A6B87F65783862B247C65C16787 /* gbfs2geojson-dummy.m */,
+				AC7DA220FAA9073452DDAAADAD87B092 /* gbfs2geojson-prefix.pch */,
+				5B0702B0A384D955434A67D2E2134C1C /* gbfs2geojson-umbrella.h */,
+				B089156E3BD3A8B8D3AFB2783113D031 /* Info.plist */,
+				DFE06F909858D69BA2013E33E78EB405 /* ResourceBundle-gbfs2geojson_Tests-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/gbfs2geojson";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -169,76 +445,152 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E9188BBE3DD2B03C79D4AE475942FBE7 /* Support Files */ = {
+		CAD75C38624007912EBF55FB00E1A137 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E2F1525394CBFEB033D1D673EB0BA080 /* gbfs2geojson.modulemap */,
-				37B47E76B0914743A8179774609C449B /* gbfs2geojson.xcconfig */,
-				9ECCFC8CAB2A8C4C96176633829612AC /* gbfs2geojson-dummy.m */,
-				EE52DAC70EAF74B4D2E1F84D42AF4C6E /* gbfs2geojson-prefix.pch */,
-				82299D751F50D8DEB286533E5F552F2A /* gbfs2geojson-umbrella.h */,
-				AC0D846DDF6AB382977ACAA69B04630C /* Info.plist */,
+				13B3E546C98F5D593FA5768A0743E13D /* Example */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/gbfs2geojson";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DE9AB0CB689BA3DA5F38E9E92463C8EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3968496EB2699846F53C90A49632FCE8 /* gbfs2geojson.framework */,
+				28BADA9D8703D61A9EE3E3B231E51F1E /* gbfs2geojson_Tests.bundle */,
+				BEFA362DD08D5F43192BCA7D3B20FAA2 /* Pods_gbfs2geojson_Tests.framework */,
+				0FD0E84AE76EA2BA7DAB7FD05D47590F /* VVJSONSchemaValidation.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A5D38670F419ADCC9FFFB3B5550303A5 /* Headers */ = {
+		07685162A136EFBD2A2926BAC6176A53 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB847B0A48A67AD71A53B695A690E053 /* gbfs2geojson-umbrella.h in Headers */,
-				73611913CE665975F0A243D6B5C11013 /* GBFSParser.h in Headers */,
+				019EC1C0019667A0205FC13215669CE6 /* gbfs2geojson-umbrella.h in Headers */,
+				EA95353A7F0613D55D4CEF6DD0B0955E /* GBFSParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F90B9250F9981AC190BCA00A6D26124F /* Headers */ = {
+		2DE10EF51EAD9D284EF278A516F6FCD9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A939285F9C9C10565377904FA5C7A7 /* Pods-gbfs2geojson_Tests-umbrella.h in Headers */,
+				4BD3C032D7F423344E126688FB2DB324 /* NSArray+VVJSONComparison.h in Headers */,
+				6D1F4E1DE88C5DDC1BB937DF94928B8E /* NSDictionary+VVJSONComparison.h in Headers */,
+				EC9370C12A91249C3A31E9190F2D9A7B /* NSNumber+VVJSONNumberTypes.h in Headers */,
+				6300DB4D70DA26710D23C31CCBC989E6 /* NSObject+VVJSONComparison.h in Headers */,
+				326E1D45B202EF92FA04F5D79431BF02 /* NSString+VVJSONPointer.h in Headers */,
+				BE7D53A9920EA34DB13D8618C788CF49 /* NSURL+VVJSONReferencing.h in Headers */,
+				3B2D576DBCD6414141CB1149F9659325 /* VVJSONSchema+StandardValidators.h in Headers */,
+				F230CAC2A65C36A1C7832EC11F3C244C /* VVJSONSchema.h in Headers */,
+				2DCD78DB7A122E83FB51C5A4E9400FC7 /* VVJSONSchemaArrayItemsValidator.h in Headers */,
+				390FAA740A2F07AE1439F204D7BB3E83 /* VVJSONSchemaArrayValidator.h in Headers */,
+				959FA1E90C0DFC3F16DA470BC8293063 /* VVJSONSchemaCombiningValidator.h in Headers */,
+				2F506C591E59B1FBD8BA2F9DAAC06129 /* VVJSONSchemaDefinitions.h in Headers */,
+				607ACC5432AFD8673EE45986195C4C94 /* VVJSONSchemaDependenciesValidator.h in Headers */,
+				8918097D201F9BB82A1C459A0FB552BE /* VVJSONSchemaEnumValidator.h in Headers */,
+				1D5E6E881FCD77E289621537F26B2C9C /* VVJSONSchemaErrors.h in Headers */,
+				ED6B973AF3043822693DD2727A0F057D /* VVJSONSchemaFactory.h in Headers */,
+				372781F86435DA3B22465E4C75204F62 /* VVJSONSchemaFormatValidator.h in Headers */,
+				1955B8564D7C3B39A2E843261CF2B275 /* VVJSONSchemaNumericValidator.h in Headers */,
+				9C2517B4D92FC3B51FCFE9E088665655 /* VVJSONSchemaObjectPropertiesValidator.h in Headers */,
+				7BD8DCE6D75DF4F0A0BBE28F6461B2AB /* VVJSONSchemaObjectValidator.h in Headers */,
+				9C08D98AC10D9884C56EE04D05E19146 /* VVJSONSchemaReference.h in Headers */,
+				0E7576CBD70C9B4EDAE88A9DAEAAC99C /* VVJSONSchemaStorage.h in Headers */,
+				8B4A5A708CA2D97E0B27F405E4BD4588 /* VVJSONSchemaStringValidator.h in Headers */,
+				521CFB5764AE88C484237866D62B67E3 /* VVJSONSchemaTypeValidator.h in Headers */,
+				BC1A736C07E133DBEC8F576BAB0A4E44 /* VVJSONSchemaValidation-umbrella.h in Headers */,
+				5B65F3073EFC6AFBB3AFF5E525F54F0A /* VVJSONSchemaValidationContext.h in Headers */,
+				84AD0461EB1DA44E4D27D27BB62F76AB /* VVJSONSchemaValidator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34E5DFD660CABDD2B5096D6657134680 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CE1434F1CC0EBD86ADF4657CCABDB7D /* Pods-gbfs2geojson_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		053E49BB1C36D2EDA288E98BEF0CE9C9 /* Pods-gbfs2geojson_Tests */ = {
+		7CA536C2648CF3FCD0E3070B0573D3B9 /* gbfs2geojson */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E1D97B18FDF68AEDB03A05FD8B6F227 /* Build configuration list for PBXNativeTarget "Pods-gbfs2geojson_Tests" */;
+			buildConfigurationList = F9BA1D81DFC6125B4D320728C0A06FEE /* Build configuration list for PBXNativeTarget "gbfs2geojson" */;
 			buildPhases = (
-				6BEFD5B0BD7E721705F9E4AC1AEB5967 /* Sources */,
-				69875BC5E5B2EA52DADBA12FC12D3006 /* Frameworks */,
-				F90B9250F9981AC190BCA00A6D26124F /* Headers */,
+				43633FCAFB41A48B3EB13C91020C0B8A /* Sources */,
+				62940F71A3450755BD0EC2011B840DF1 /* Frameworks */,
+				8BA42C657A30C3F82CF940FE2FC42D6E /* Resources */,
+				07685162A136EFBD2A2926BAC6176A53 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E37917970E46B1C2F4F1C597DF6842EE /* PBXTargetDependency */,
-			);
-			name = "Pods-gbfs2geojson_Tests";
-			productName = "Pods-gbfs2geojson_Tests";
-			productReference = 1D4FE163027DB2F0F336134DFDF61AF1 /* Pods_gbfs2geojson_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		2B89EC64189E265FA882EB29B79176B9 /* gbfs2geojson */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1ADBFEAB5C9F1F5C0005AAA5DF6A08A7 /* Build configuration list for PBXNativeTarget "gbfs2geojson" */;
-			buildPhases = (
-				3320D4C8F08B0155CDD7C5645C48FC74 /* Sources */,
-				76931D83E2BCC1292E10426B9B32300E /* Frameworks */,
-				A5D38670F419ADCC9FFFB3B5550303A5 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
+				C59141883A80D65E423D59B589995B41 /* PBXTargetDependency */,
 			);
 			name = gbfs2geojson;
 			productName = gbfs2geojson;
-			productReference = 1FB0192699A1BD49CE9D6224B1EB207B /* gbfs2geojson.framework */;
+			productReference = 3968496EB2699846F53C90A49632FCE8 /* gbfs2geojson.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B861E270740995CC9C42D8619127D424 /* VVJSONSchemaValidation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2B1B240250F95E1C7BA10C6163BB36F /* Build configuration list for PBXNativeTarget "VVJSONSchemaValidation" */;
+			buildPhases = (
+				A36503B69BE3EB39C995163C60E7A28E /* Sources */,
+				7B0566BD772216A73F17A328CEEBA24D /* Frameworks */,
+				2DE10EF51EAD9D284EF278A516F6FCD9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VVJSONSchemaValidation;
+			productName = VVJSONSchemaValidation;
+			productReference = 0FD0E84AE76EA2BA7DAB7FD05D47590F /* VVJSONSchemaValidation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B8FF144C312E94B7358C0F5FEA400B7F /* gbfs2geojson-gbfs2geojson_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 388BA650CBCBE22EC1C3A0E422703C0F /* Build configuration list for PBXNativeTarget "gbfs2geojson-gbfs2geojson_Tests" */;
+			buildPhases = (
+				ED78127FDF666C01418CF07893267680 /* Sources */,
+				7FDC28BC8387C18CA1573F9193A81686 /* Frameworks */,
+				C276679C1A383D2207B5035F7D606693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gbfs2geojson-gbfs2geojson_Tests";
+			productName = "gbfs2geojson-gbfs2geojson_Tests";
+			productReference = 28BADA9D8703D61A9EE3E3B231E51F1E /* gbfs2geojson_Tests.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		BD13FA06989FCB7D9A7CD32962423B4A /* Pods-gbfs2geojson_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40AF371C2326A534E47E945E033800FC /* Build configuration list for PBXNativeTarget "Pods-gbfs2geojson_Tests" */;
+			buildPhases = (
+				CEF2D7A11DE40211E4C2DCAC8E59E898 /* Sources */,
+				5A757DFA7907E83CEE997767CEA91530 /* Frameworks */,
+				34E5DFD660CABDD2B5096D6657134680 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86D9FE670CA9B5950C3D3350A42B5BB7 /* PBXTargetDependency */,
+				179BB8533846C2C58985271C3393E2A5 /* PBXTargetDependency */,
+			);
+			name = "Pods-gbfs2geojson_Tests";
+			productName = "Pods-gbfs2geojson_Tests";
+			productReference = BEFA362DD08D5F43192BCA7D3B20FAA2 /* Pods_gbfs2geojson_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -258,46 +610,151 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A80ACE457C7D3CF2D0567694188BA324 /* Products */;
+			productRefGroup = DE9AB0CB689BA3DA5F38E9E92463C8EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2B89EC64189E265FA882EB29B79176B9 /* gbfs2geojson */,
-				053E49BB1C36D2EDA288E98BEF0CE9C9 /* Pods-gbfs2geojson_Tests */,
+				7CA536C2648CF3FCD0E3070B0573D3B9 /* gbfs2geojson */,
+				B8FF144C312E94B7358C0F5FEA400B7F /* gbfs2geojson-gbfs2geojson_Tests */,
+				BD13FA06989FCB7D9A7CD32962423B4A /* Pods-gbfs2geojson_Tests */,
+				B861E270740995CC9C42D8619127D424 /* VVJSONSchemaValidation */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		3320D4C8F08B0155CDD7C5645C48FC74 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		8BA42C657A30C3F82CF940FE2FC42D6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B666876EC8BCBC8AB7B9E40057DB6B22 /* gbfs2geojson-dummy.m in Sources */,
-				D843638CC2EB338804E8106E2CB6CDE2 /* GBFSParser.m in Sources */,
+				373D3E0FBC877535750F3C9BDEF7E234 /* gbfs2geojson_Tests.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BEFD5B0BD7E721705F9E4AC1AEB5967 /* Sources */ = {
+		C276679C1A383D2207B5035F7D606693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97815D4313A007C81013BB8BDC4C9836 /* gbfs2geojson.podspec.json in Resources */,
+				05F040060FB2AFC9CA210062921540F2 /* geoJSONSchema.json in Resources */,
+				3C06147157F862DBEC963D2009FCC608 /* station_information.json in Resources */,
+				43B2E19D9ABC4EA6488EE4498436160E /* station_status.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43633FCAFB41A48B3EB13C91020C0B8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91CF48D7BF923F227A5B3BA1D0F0F6BC /* Pods-gbfs2geojson_Tests-dummy.m in Sources */,
+				E7F358B7A47B4E4E72603B116EEF9E14 /* gbfs2geojson-dummy.m in Sources */,
+				4E004DD3B0DAB0528E73A08E91B32458 /* GBFSParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A36503B69BE3EB39C995163C60E7A28E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AADE3A768B8727CA47855F36658CAFD /* NSArray+VVJSONComparison.m in Sources */,
+				EE7083B84BF8A72E6FF007B287B1780D /* NSDictionary+VVJSONComparison.m in Sources */,
+				9BBD8C1520C41B0A2620FC3D703A1C90 /* NSNumber+VVJSONNumberTypes.m in Sources */,
+				F78953D396F435D00081DF90431B0D01 /* NSObject+VVJSONComparison.m in Sources */,
+				4FC8A617C28D5CF2FEA6ABB2786A8457 /* NSString+VVJSONPointer.m in Sources */,
+				F0730B13A2A520B4797249F18C5FF5FB /* NSURL+VVJSONReferencing.m in Sources */,
+				08C0F199062DC6DC366EB0C1D0E65B6D /* VVJSONSchema+StandardValidators.m in Sources */,
+				400E203523683CC5B67348898A6584ED /* VVJSONSchema.m in Sources */,
+				043AB886465AB1D1E035ACCC16FD9AF4 /* VVJSONSchemaArrayItemsValidator.m in Sources */,
+				08911C9043FF5C26947C7E9E3A442C40 /* VVJSONSchemaArrayValidator.m in Sources */,
+				24506F1455627B74FDF65ABEF6A81AEC /* VVJSONSchemaCombiningValidator.m in Sources */,
+				64A13204F138FD533098DA26C512FB94 /* VVJSONSchemaDefinitions.m in Sources */,
+				A900BE0264F838354B5A6B63484AD475 /* VVJSONSchemaDependenciesValidator.m in Sources */,
+				D1777C154A19782B43A68EBFD9A164D0 /* VVJSONSchemaEnumValidator.m in Sources */,
+				5626A921A99638D8FB287A10EEB6FB55 /* VVJSONSchemaErrors.m in Sources */,
+				711990C50781E8FEFCCC16B3B4C22405 /* VVJSONSchemaFactory.m in Sources */,
+				2110D4DEA8050E4ED351557771E50F2E /* VVJSONSchemaFormatValidator.m in Sources */,
+				845251C294CA0457C3E1F86EF53C44F3 /* VVJSONSchemaNumericValidator.m in Sources */,
+				B824C49E73342EB6D8173BE428A8F3B5 /* VVJSONSchemaObjectPropertiesValidator.m in Sources */,
+				58A47B115B2EFFB6D94B53D4FC66ACCA /* VVJSONSchemaObjectValidator.m in Sources */,
+				2DB5499878D6BABFD7D2DBF76FE03B75 /* VVJSONSchemaReference.m in Sources */,
+				4691EF2084ABFF15E257B9B581EF0255 /* VVJSONSchemaStorage.m in Sources */,
+				AEBC36CE1011DF5BD8D1BFCE1A2F17BB /* VVJSONSchemaStringValidator.m in Sources */,
+				43AEE8DC4964CF54E6761F3282A57D8D /* VVJSONSchemaTypeValidator.m in Sources */,
+				6AE2985B510B8CF93E9F3B790EED1193 /* VVJSONSchemaValidation-dummy.m in Sources */,
+				64EAA171D8AC5B191852160E0CD174FB /* VVJSONSchemaValidationContext.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF2D7A11DE40211E4C2DCAC8E59E898 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27839906689EB8BFD39D7A62B6AC8FC /* Pods-gbfs2geojson_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED78127FDF666C01418CF07893267680 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E37917970E46B1C2F4F1C597DF6842EE /* PBXTargetDependency */ = {
+		179BB8533846C2C58985271C3393E2A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = gbfs2geojson;
-			target = 2B89EC64189E265FA882EB29B79176B9 /* gbfs2geojson */;
-			targetProxy = CD2F620564CCC0A600B150FA369A71AC /* PBXContainerItemProxy */;
+			target = 7CA536C2648CF3FCD0E3070B0573D3B9 /* gbfs2geojson */;
+			targetProxy = 61C9E9D1158B6AC7D44A95BF5CA37B41 /* PBXContainerItemProxy */;
+		};
+		86D9FE670CA9B5950C3D3350A42B5BB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VVJSONSchemaValidation;
+			target = B861E270740995CC9C42D8619127D424 /* VVJSONSchemaValidation */;
+			targetProxy = FEE0F641D7CFF39828D2CFFBD4B2F22D /* PBXContainerItemProxy */;
+		};
+		C59141883A80D65E423D59B589995B41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "gbfs2geojson-gbfs2geojson_Tests";
+			target = B8FF144C312E94B7358C0F5FEA400B7F /* gbfs2geojson-gbfs2geojson_Tests */;
+			targetProxy = 7A293EAA4AD13D7F37ECF8418C7B93B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		058BEEBEF130D01015B1CAAD5567ECE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08782D516221A4AB1D699BF2ABD9537A /* gbfs2geojson.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/gbfs2geojson/gbfs2geojson-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/gbfs2geojson/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/gbfs2geojson/gbfs2geojson.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = gbfs2geojson;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -336,7 +793,7 @@
 			};
 			name = Release;
 		};
-		13E85F29ABBB86C49E512A79DCC5E520 /* Debug */ = {
+		2D52ED0CE3FCDE7CEC1D8983DA6DFA82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A915334141219D6D52776802ADEA003D /* Pods-gbfs2geojson_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -369,36 +826,53 @@
 			};
 			name = Debug;
 		};
-		1B34A2235C106F2068C4C898DDE864FF /* Debug */ = {
+		341EA31BAE78E341861BE64EAD460797 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37B47E76B0914743A8179774609C449B /* gbfs2geojson.xcconfig */;
+			baseConfigurationReference = 08782D516221A4AB1D699BF2ABD9537A /* gbfs2geojson.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gbfs2geojson";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/gbfs2geojson/ResourceBundle-gbfs2geojson_Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = gbfs2geojson_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3C3559AC42D56394E9B38B53F34E4E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD87D3C840D395DF3AF8024D2CEEB8FB /* VVJSONSchemaValidation.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/gbfs2geojson/gbfs2geojson-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/gbfs2geojson/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/VVJSONSchemaValidation/VVJSONSchemaValidation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VVJSONSchemaValidation/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/gbfs2geojson/gbfs2geojson.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = gbfs2geojson;
+				MODULEMAP_FILE = "Target Support Files/VVJSONSchemaValidation/VVJSONSchemaValidation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = VVJSONSchemaValidation;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		39089CBEC16252C0D695185929D5A7CE /* Release */ = {
+		69DC86D4891363B570C1A297F307C4DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC66D08BC7F8BF82C44CA5A231F8AFCA /* Pods-gbfs2geojson_Tests.release.xcconfig */;
 			buildSettings = {
@@ -431,9 +905,9 @@
 			};
 			name = Release;
 		};
-		43B70123888032ECFA3EB5CE52D0883C /* Release */ = {
+		6BE23ED1DB303BCFBCB331F074093682 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37B47E76B0914743A8179774609C449B /* gbfs2geojson.xcconfig */;
+			baseConfigurationReference = 08782D516221A4AB1D699BF2ABD9537A /* gbfs2geojson.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -457,6 +931,23 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BDC4AB815C9F15EA0D2722AE14B2AE29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08782D516221A4AB1D699BF2ABD9537A /* gbfs2geojson.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gbfs2geojson";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/gbfs2geojson/ResourceBundle-gbfs2geojson_Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = gbfs2geojson_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -502,18 +993,38 @@
 			};
 			name = Debug;
 		};
+		DE01F70D18287D7BC3A042CFB73FA580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD87D3C840D395DF3AF8024D2CEEB8FB /* VVJSONSchemaValidation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VVJSONSchemaValidation/VVJSONSchemaValidation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VVJSONSchemaValidation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VVJSONSchemaValidation/VVJSONSchemaValidation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = VVJSONSchemaValidation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1ADBFEAB5C9F1F5C0005AAA5DF6A08A7 /* Build configuration list for PBXNativeTarget "gbfs2geojson" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1B34A2235C106F2068C4C898DDE864FF /* Debug */,
-				43B70123888032ECFA3EB5CE52D0883C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -523,11 +1034,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7E1D97B18FDF68AEDB03A05FD8B6F227 /* Build configuration list for PBXNativeTarget "Pods-gbfs2geojson_Tests" */ = {
+		388BA650CBCBE22EC1C3A0E422703C0F /* Build configuration list for PBXNativeTarget "gbfs2geojson-gbfs2geojson_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13E85F29ABBB86C49E512A79DCC5E520 /* Debug */,
-				39089CBEC16252C0D695185929D5A7CE /* Release */,
+				341EA31BAE78E341861BE64EAD460797 /* Debug */,
+				BDC4AB815C9F15EA0D2722AE14B2AE29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40AF371C2326A534E47E945E033800FC /* Build configuration list for PBXNativeTarget "Pods-gbfs2geojson_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D52ED0CE3FCDE7CEC1D8983DA6DFA82 /* Debug */,
+				69DC86D4891363B570C1A297F307C4DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2B1B240250F95E1C7BA10C6163BB36F /* Build configuration list for PBXNativeTarget "VVJSONSchemaValidation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE01F70D18287D7BC3A042CFB73FA580 /* Debug */,
+				3C3559AC42D56394E9B38B53F34E4E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9BA1D81DFC6125B4D320728C0A06FEE /* Build configuration list for PBXNativeTarget "gbfs2geojson" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				058BEEBEF130D01015B1CAAD5567ECE8 /* Debug */,
+				6BE23ED1DB303BCFBCB331F074093682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

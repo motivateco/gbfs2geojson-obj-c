@@ -1,16 +1,19 @@
 PODS:
-  - gbfs2geojson (0.1.0)
+  - gbfs2geojson (0.0.1)
+  - VVJSONSchemaValidation (1.4.0)
 
 DEPENDENCIES:
   - gbfs2geojson (from `../`)
+  - VVJSONSchemaValidation
 
 EXTERNAL SOURCES:
   gbfs2geojson:
     :path: "../"
 
 SPEC CHECKSUMS:
-  gbfs2geojson: 415eaee4acd9bb669ebf867c41a578a1ba54eb22
+  gbfs2geojson: b1ee1e4b878c7e2a618822c22c72e05fc9186878
+  VVJSONSchemaValidation: 11f5ba886e80baccae5d606f3b10f20c1303200d
 
-PODFILE CHECKSUM: 52048eb256da0cbee98e6ae975e8384ffab297e3
+PODFILE CHECKSUM: 4e7fd663c987275e7f7abd04e98e1f682161e66a
 
 COCOAPODS: 1.0.1
