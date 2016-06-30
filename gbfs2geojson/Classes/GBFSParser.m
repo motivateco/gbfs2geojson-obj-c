@@ -7,12 +7,27 @@
 //
 
 #import "GBFSParser.h"
-
+/**
+ 
+ GBFSParser is a tool for converting GBFS feeds to geoJSON. By passing a NSURL
+ to the methods, a NSJSON-serializeable NSDictionary will be returned.
+ 
+ */
 @interface GBFSParser ()
 @end
 
 @implementation GBFSParser
 
+///--------------------------
+/// @name Convenience Methods
+///--------------------------
+
+/**
+ Returns a NSDictionary containing the URLs and Names of feeds from a given
+ auto discovery URL.
+ 
+ @param URL the autodiscovery url for the bikeshare, usually ending in .gbfs
+*/
 + (NSDictionary *) feedsFromAutoDiscovery:(NSURL *) URL {
     NSError *error;
     NSData *data = [NSData dataWithContentsOfURL: URL];
@@ -24,6 +39,16 @@
     return feeds;
 }
 
+///-----------------------
+/// @name Converting Feeds
+///-----------------------
+
+/**
+ Returns a NSDictionary containing the geoJSON information from a given auto
+ discovery URL.
+ 
+ @param URL the autodiscovery url for the bikeshare, usually ending in .gbfs
+ */
 + (NSDictionary *) geoJSONFromAutoDiscovery:(NSURL *) autoDiscoveryURL {
     NSDictionary *feeds = [self feedsFromAutoDiscovery:autoDiscoveryURL];
     NSURL *statusURL = [NSURL URLWithString:feeds[@"station_status"]];
@@ -31,6 +56,13 @@
     return [self geoJSONFromStatusURL:statusURL infoURL:infoURL];
 }
 
+/**
+ Returns a NSDictionary containing the geoJSON information from two
+ URLs.
+ 
+ @param statusURL Path to the bikeshare's station_status.json
+ @param infoURL Path to the bikeshare's station_information.json
+ */
 + (NSDictionary *) geoJSONFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL {
     NSMutableDictionary *geoJSON  = [[NSMutableDictionary alloc] initWithDictionary:@{@"type": @"FeatureCollection"}];
     NSMutableDictionary *allStations = [[NSMutableDictionary alloc] init];

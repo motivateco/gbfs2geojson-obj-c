@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/motivateco/gbfs2geojson-obj-c'
   s.license          = { :type => 'CC-BY-3.0', :file => 'LICENSE' }
   s.author           = { 'Andrew Fischer' => 'afischer15@mac.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/test.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/motivateco/gbfs2geojson-obj-c'}
 
   s.resource_bundles = {'gbfs2geojson_Tests' => 'Example/**/*.json'}
 
