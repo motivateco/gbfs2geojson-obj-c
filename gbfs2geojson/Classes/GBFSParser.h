@@ -10,6 +10,6 @@
 
 @interface GBFSParser : NSObject
 + (NSDictionary *) feedsFromAutoDiscovery:(NSURL *) URL;
-+ (NSDictionary *) featureListFromAutoDiscovery:(NSURL *) autoDiscoveryURL;
-+ (NSDictionary *) featureListFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL;
++ (NSDictionary *) geoJSONFromAutoDiscovery:(NSURL *) autoDiscoveryURL;
++ (NSDictionary *) geoJSONFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL;
 @end

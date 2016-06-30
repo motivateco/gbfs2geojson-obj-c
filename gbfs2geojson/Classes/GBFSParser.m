@@ -24,32 +24,31 @@
     return feeds;
 }
 
-+ (NSDictionary *) featureListFromAutoDiscovery:(NSURL *) autoDiscoveryURL {
++ (NSDictionary *) geoJSONFromAutoDiscovery:(NSURL *) autoDiscoveryURL {
     NSDictionary *feeds = [self feedsFromAutoDiscovery:autoDiscoveryURL];
     NSURL *statusURL = [NSURL URLWithString:feeds[@"station_status"]];
     NSURL *infoURL   = [NSURL URLWithString:feeds[@"station_information"]];
-    return [self featureListFromStatusURL:statusURL infoURL:infoURL];
+    return [self geoJSONFromStatusURL:statusURL infoURL:infoURL];
 }
 
-+ (NSDictionary *) featureListFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL {
++ (NSDictionary *) geoJSONFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL {
     NSMutableDictionary *geoJSON  = [[NSMutableDictionary alloc] initWithDictionary:@{@"type": @"FeatureCollection"}];
     NSMutableDictionary *allStations = [[NSMutableDictionary alloc] init];
+    
     NSError *statusError;
-    NSError *infoError;
-    
     NSData *statusData = [NSData dataWithContentsOfURL: statusURL];
-    NSData *infoData   = [NSData dataWithContentsOfURL: infoURL];
-    
     NSDictionary *stationStatus = [NSJSONSerialization JSONObjectWithData:statusData options:kNilOptions error:&statusError];
-    NSDictionary *stationInfo = [NSJSONSerialization JSONObjectWithData:infoData options:kNilOptions error:&infoError];
-    
-    
+
     for (NSDictionary *station in stationStatus[@"data"][@"stations"]) {
         NSMutableDictionary *stationStatusDict = [allStations objectForKey:station[@"station_id"]];
         NSMutableDictionary *thisStation = [station mutableCopy];
         [thisStation addEntriesFromDictionary:stationStatusDict];
         [allStations setObject:thisStation forKey:station[@"station_id"]];
     }
+
+    NSError *infoError;
+    NSData *infoData   = [NSData dataWithContentsOfURL: infoURL];
+    NSDictionary *stationInfo = [NSJSONSerialization JSONObjectWithData:infoData options:kNilOptions error:&infoError];
     
     for (NSDictionary *station in stationInfo[@"data"][@"stations"]) {
         NSMutableDictionary *stationInfoDict = [allStations objectForKey:station[@"station_id"]];
@@ -57,6 +56,7 @@
         [thisStation addEntriesFromDictionary:stationInfoDict];
         [allStations setObject:thisStation forKey:station[@"station_id"]];
     }
+
 
     NSMutableArray *features = [[NSMutableArray alloc] init];
     for (NSDictionary *station in allStations){
@@ -75,7 +75,6 @@
                               }];
     }
     [geoJSON setObject:features forKey:@"features"];
-
     return geoJSON;
     
 }
