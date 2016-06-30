@@ -9,14 +9,10 @@ Pod::Spec.new do |s|
   s.summary          = 'A parser for GBFS to convert it to geoJSON.'
 
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A number of functions to make using GBFS easier in your application or
+libary.
                        DESC
 
 
@@ -24,7 +20,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/motivateco/gbfs2geojson-obj-c'
   s.license          = { :type => 'CC-BY-3.0', :file => 'LICENSE' }
   s.author           = { 'Andrew Fischer' => 'afischer15@mac.com' }
-  s.source           = { :git => 'https://github.com/motivateco/gbfs2geojson-obj-c'}
+  s.source           = { :git => 'https://github.com/motivateco/gbfs2geojson-obj-c.git', :tag => s.version.to_s}
 
   s.resource_bundles = {'gbfs2geojson_Tests' => 'Example/**/*.json'}
 
