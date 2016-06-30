@@ -18,7 +18,7 @@ libary.
 
 
   s.homepage         = 'https://github.com/motivateco/gbfs2geojson-obj-c'
-  s.license          = { :type => 'CC-BY-3.0', :file => 'LICENSE' }
+  s.license          = { :type => 'CC-BY-2.0', :file => 'LICENSE' }
   s.author           = { 'Andrew Fischer' => 'afischer15@mac.com' }
   s.source           = { :git => 'https://github.com/motivateco/gbfs2geojson-obj-c.git', :tag => s.version.to_s}
 
