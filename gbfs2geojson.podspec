@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'gbfs2geojson'
-  s.version          = '0.0.1 beta'
+  s.version          = '0.0.1beta'
   s.summary          = 'A parser for GBFS to convert it to geoJSON.'
 
 
