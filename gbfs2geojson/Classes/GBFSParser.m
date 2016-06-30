@@ -64,7 +64,7 @@
  @param infoURL Path to the bikeshare's station_information.json
  */
 + (NSDictionary *) geoJSONFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL {
-    NSMutableDictionary *geoJSON  = [[NSMutableDictionary alloc] initWithDictionary:@{@"type": @"FeatureCollection"}];
+    NSMutableDictionary *geoJSON  = @{@"type": @"FeatureCollection"};
     NSMutableDictionary *allStations = [[NSMutableDictionary alloc] init];
     
     dispatch_group_t group = dispatch_group_create();
@@ -101,13 +101,12 @@
         NSMutableArray *features = [[NSMutableArray alloc] init];
         for (NSDictionary *station in allStations){
             NSDictionary *properties = [[NSDictionary alloc] initWithDictionary:allStations[station]];
-            NSDictionary *geometry   = [[NSDictionary alloc] initWithDictionary:
-                                        @{
+            NSDictionary *geometry   =  @{
                                           @"type": @"Point",
                                           @"coordinates": @[allStations[station][@"lat"],
                                                             allStations[station][@"lon"]
                                                             ]
-                                          }];
+                                          };
             [features addObject:@{
                                   @"type": @"Feature",
                                   @"properties": properties,
