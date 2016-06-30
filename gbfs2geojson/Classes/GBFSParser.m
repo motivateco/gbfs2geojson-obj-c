@@ -35,47 +35,58 @@
     NSMutableDictionary *geoJSON  = [[NSMutableDictionary alloc] initWithDictionary:@{@"type": @"FeatureCollection"}];
     NSMutableDictionary *allStations = [[NSMutableDictionary alloc] init];
     
-    NSError *statusError;
-    NSData *statusData = [NSData dataWithContentsOfURL: statusURL];
-    NSDictionary *stationStatus = [NSJSONSerialization JSONObjectWithData:statusData options:kNilOptions error:&statusError];
-
-    for (NSDictionary *station in stationStatus[@"data"][@"stations"]) {
-        NSMutableDictionary *stationStatusDict = [allStations objectForKey:station[@"station_id"]];
-        NSMutableDictionary *thisStation = [station mutableCopy];
-        [thisStation addEntriesFromDictionary:stationStatusDict];
-        [allStations setObject:thisStation forKey:station[@"station_id"]];
-    }
-
-    NSError *infoError;
-    NSData *infoData   = [NSData dataWithContentsOfURL: infoURL];
-    NSDictionary *stationInfo = [NSJSONSerialization JSONObjectWithData:infoData options:kNilOptions error:&infoError];
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
-    for (NSDictionary *station in stationInfo[@"data"][@"stations"]) {
-        NSMutableDictionary *stationInfoDict = [allStations objectForKey:station[@"station_id"]];
-        NSMutableDictionary *thisStation = [station mutableCopy];
-        [thisStation addEntriesFromDictionary:stationInfoDict];
-        [allStations setObject:thisStation forKey:station[@"station_id"]];
-    }
+    dispatch_group_async(group,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
+        NSError *statusError;
+        NSData *statusData = [NSData dataWithContentsOfURL: statusURL];
+        NSDictionary *stationStatus = [NSJSONSerialization JSONObjectWithData:statusData options:kNilOptions error:&statusError];
 
-
-    NSMutableArray *features = [[NSMutableArray alloc] init];
-    for (NSDictionary *station in allStations){
-        NSDictionary *properties = [[NSDictionary alloc] initWithDictionary:allStations[station]];
-        NSDictionary *geometry   = [[NSDictionary alloc] initWithDictionary:
-                                    @{
-                                      @"type": @"Point",
-                                      @"coordinates": @[allStations[station][@"lat"],
-                                                        allStations[station][@"lon"]
-                                                        ]
-                                      }];
-        [features addObject:@{
-                              @"type": @"Feature",
-                              @"properties": properties,
-                              @"geometry": geometry
-                              }];
-    }
-    [geoJSON setObject:features forKey:@"features"];
+        for (NSDictionary *station in stationStatus[@"data"][@"stations"]) {
+            NSMutableDictionary *stationStatusDict = [allStations objectForKey:station[@"station_id"]];
+            NSMutableDictionary *thisStation = [station mutableCopy];
+            [thisStation addEntriesFromDictionary:stationStatusDict];
+            [allStations setObject:thisStation forKey:station[@"station_id"]];
+        }
+    });
+    
+    
+    dispatch_group_async(group,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
+        NSError *infoError;
+        NSData *infoData   = [NSData dataWithContentsOfURL: infoURL];
+        NSDictionary *stationInfo = [NSJSONSerialization JSONObjectWithData:infoData options:kNilOptions error:&infoError];
+        
+        for (NSDictionary *station in stationInfo[@"data"][@"stations"]) {
+            NSMutableDictionary *stationInfoDict = [allStations objectForKey:station[@"station_id"]];
+            NSMutableDictionary *thisStation = [station mutableCopy];
+            [thisStation addEntriesFromDictionary:stationInfoDict];
+            [allStations setObject:thisStation forKey:station[@"station_id"]];
+        }
+    });
+    
+    dispatch_group_notify(group,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
+        NSMutableArray *features = [[NSMutableArray alloc] init];
+        for (NSDictionary *station in allStations){
+            NSDictionary *properties = [[NSDictionary alloc] initWithDictionary:allStations[station]];
+            NSDictionary *geometry   = [[NSDictionary alloc] initWithDictionary:
+                                        @{
+                                          @"type": @"Point",
+                                          @"coordinates": @[allStations[station][@"lat"],
+                                                            allStations[station][@"lon"]
+                                                            ]
+                                          }];
+            [features addObject:@{
+                                  @"type": @"Feature",
+                                  @"properties": properties,
+                                  @"geometry": geometry
+                                  }];
+        }
+        [geoJSON setObject:features forKey:@"features"];
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     return geoJSON;
-    
 }
 @end

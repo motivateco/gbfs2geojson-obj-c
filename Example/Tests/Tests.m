@@ -41,9 +41,16 @@
 }
 
 
+- (void)testIsValidJSON {
+    NSString *autoDiscoveryFile = [self.bundle pathForResource:@"gbfs" ofType:@"json"];
+    NSURL *autoDiscoveryURL = [NSURL fileURLWithPath:autoDiscoveryFile];
+    NSDictionary *toValidateJson = [GBFSParser geoJSONFromAutoDiscovery:autoDiscoveryURL];
+    XCTAssertTrue([NSJSONSerialization isValidJSONObject:toValidateJson]);
+}
+
 - (void)testConformsToSchema {
     NSString *filepath = [self.bundle pathForResource:@"geoJSONSchema"
-                                          ofType:@"json"];
+                                               ofType:@"json"];
     NSLog(@"filepath %@", filepath);
     NSURL *schema = [NSURL fileURLWithPath:filepath];
     NSData *schemaData = [NSData dataWithContentsOfURL:schema];
@@ -55,32 +62,9 @@
                                                        options:0
                                                          error:&seralizationError];
 
-    XCTAssertTrue([NSJSONSerialization isValidJSONObject:toValidateJson]);
     XCTAssertTrue([jsonSchema validateObject:jsonData withError:&validationError]);
 }
 
-- (void)testProducesCorrectOutput{
-    NSString *infoPath = [self.bundle pathForResource:@"station_information" ofType:@"json"];
-    NSString *statPath = [self.bundle pathForResource:@"station_status" ofType:@"json"];
-    NSLog(@"PATHZ : : : : : %@ %@", infoPath, statPath);
-    NSDictionary *geoJson = [GBFSParser geoJSONFromStatusURL:[NSURL fileURLWithPath:statPath]
-                                                     infoURL:[NSURL fileURLWithPath:infoPath]];
-    
-    NSString *fileName = @"myJsonDict.dat"; // probably somewhere in 'Documents'
-    NSOutputStream *os = [[NSOutputStream alloc] initToFileAtPath:fileName append:NO];
-    
-    [os open];
-    [NSJSONSerialization writeJSONObject:geoJson toStream:os options:0 error:nil];
-    [os close];
-
-}
-
-- (void)testExample
-{
-
-    XCTAssertNoThrow([GBFSParser feedsFromAutoDiscovery:self.CitiBikeAutoDiscovery]);
-    XCTAssertNoThrow([GBFSParser geoJSONFromAutoDiscovery:self.CitiBikeAutoDiscovery]);
-}
 
 - (void)tearDown
 {
