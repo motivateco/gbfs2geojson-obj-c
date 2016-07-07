@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface GBFSParser : NSObject
-+ (NSDictionary *) feedsFromAutoDiscovery:(NSURL *) URL;
-+ (NSDictionary *) geoJSONFromAutoDiscovery:(NSURL *) autoDiscoveryURL;
-+ (NSDictionary *) geoJSONFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL;
++ (NSDictionary *) feedsFromAutoDiscovery:(NSURL *) URL onCompletion:(void (^)())completionBlock;
++ (NSDictionary *) geoJSONFromAutoDiscovery:(NSURL *) autoDiscoveryURL onCompletion:(void (^)())completionBlock;
++ (NSDictionary *) geoJSONFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL onCompletion:(void (^)())completionBlock;
 @end

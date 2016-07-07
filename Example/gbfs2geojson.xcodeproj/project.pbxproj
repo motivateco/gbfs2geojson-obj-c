@@ -31,6 +31,7 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		718162CB1D2EE87E00983BBB /* BlockMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockMacros.h; sourceTree = "<group>"; };
 		7186E2FA1D241EFD00262BAF /* geoJSONSchema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = geoJSONSchema.json; sourceTree = "<group>"; };
 		7186E2FC1D24534D00262BAF /* station_information.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = station_information.json; sourceTree = "<group>"; };
 		7186E2FD1D24534D00262BAF /* station_status.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = station_status.json; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F5BB195388D20070C39A /* Tests.m */,
+				718162CB1D2EE87E00983BBB /* BlockMacros.h */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;

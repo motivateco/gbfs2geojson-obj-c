@@ -28,7 +28,7 @@
  
  @param URL the autodiscovery url for the bikeshare, usually ending in .gbfs
 */
-+ (NSDictionary *) feedsFromAutoDiscovery:(NSURL *) URL {
++ (NSDictionary *) feedsFromAutoDiscovery:(NSURL *) URL onCompletion:(void (^)())completionBlock {
     NSError *error;
     NSData *data = [NSData dataWithContentsOfURL: URL];
     NSDictionary *autoDiscoveryJSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
@@ -36,6 +36,7 @@
     for (NSDictionary *feed in autoDiscoveryJSON[@"data"][@"en"][@"feeds"]){
         [feeds setValue:feed[@"url"] forKey:feed[@"name"]];
     }
+    completionBlock();
     return feeds;
 }
 
@@ -49,11 +50,11 @@
  
  @param URL the autodiscovery url for the bikeshare, usually ending in .gbfs
  */
-+ (NSDictionary *) geoJSONFromAutoDiscovery:(NSURL *) autoDiscoveryURL {
-    NSDictionary *feeds = [self feedsFromAutoDiscovery:autoDiscoveryURL];
++ (NSDictionary *) geoJSONFromAutoDiscovery:(NSURL *) autoDiscoveryURL onCompletion:(void (^)())completionBlock {
+    NSDictionary *feeds = [self feedsFromAutoDiscovery:autoDiscoveryURL onCompletion:^{}];
     NSURL *statusURL = [NSURL URLWithString:feeds[@"station_status"]];
     NSURL *infoURL   = [NSURL URLWithString:feeds[@"station_information"]];
-    return [self geoJSONFromStatusURL:statusURL infoURL:infoURL];
+    return [self geoJSONFromStatusURL:statusURL infoURL:infoURL onCompletion:completionBlock];
 }
 
 /**
@@ -63,7 +64,7 @@
  @param statusURL Path to the bikeshare's station_status.json
  @param infoURL Path to the bikeshare's station_information.json
  */
-+ (NSDictionary *) geoJSONFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL {
++ (NSDictionary *) geoJSONFromStatusURL:(NSURL *) statusURL infoURL:(NSURL *) infoURL onCompletion:(void (^)())completionBlock {
     NSMutableDictionary *geoJSON  = @{@"type": @"FeatureCollection"};
     NSMutableDictionary *allStations = [[NSMutableDictionary alloc] init];
     
@@ -105,19 +106,21 @@
                                           @"type": @"Point",
                                           @"coordinates": @[allStations[station][@"lat"],
                                                             allStations[station][@"lon"]
-                                                            ]
-                                          };
+                                                           ]
+                                         };
             [features addObject:@{
                                   @"type": @"Feature",
                                   @"properties": properties,
                                   @"geometry": geometry
-                                  }];
+                                 }];
         }
         [geoJSON setObject:features forKey:@"features"];
         dispatch_semaphore_signal(semaphore);
     });
+
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW);
     
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    completionBlock();
     return geoJSON;
 }
 @end

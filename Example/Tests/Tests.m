@@ -7,8 +7,8 @@
 //
 
 @import XCTest;
+#import "BlockMacros.h"
 #import <gbfs2geojson/GBFSParser.h>
-#import <VVJSONSchemaValidation/VVJSONSchema.h>
 
 @interface Tests : XCTestCase
 @property (strong, nonatomic) NSURL *CitiBikeAutoDiscovery;
@@ -26,6 +26,7 @@
 }
 
 - (void)testValidDictFromAutoDiscovery {
+    StartBlock();
     NSDictionary *expected = @{
                                @"station_information": @"https://gbfs.citibikenyc.com/gbfs/en/station_information.json",
                                @"station_status"     : @"https://gbfs.citibikenyc.com/gbfs/en/station_status.json",
@@ -36,35 +37,29 @@
     
     NSString *autoDiscoveryFile = [self.bundle pathForResource:@"gbfs" ofType:@"json"];
     NSURL *autoDiscoveryURL = [NSURL fileURLWithPath:autoDiscoveryFile];
-    NSDictionary *result = [GBFSParser feedsFromAutoDiscovery:autoDiscoveryURL];
+    
+    NSDictionary *result = [GBFSParser feedsFromAutoDiscovery:autoDiscoveryURL onCompletion:^{
+        EndBlock();
+    }];
+    WaitUntilBlockCompletes();
     XCTAssertEqualObjects(expected, result);
+
 }
 
 
 - (void)testIsValidJSON {
+    StartBlock();
     NSString *autoDiscoveryFile = [self.bundle pathForResource:@"gbfs" ofType:@"json"];
     NSURL *autoDiscoveryURL = [NSURL fileURLWithPath:autoDiscoveryFile];
-    NSDictionary *toValidateJson = [GBFSParser geoJSONFromAutoDiscovery:autoDiscoveryURL];
+    
+
+    NSDictionary *toValidateJson = [GBFSParser geoJSONFromAutoDiscovery:autoDiscoveryURL onCompletion:^{
+        EndBlock();
+    }];
+    WaitUntilBlockCompletes();
     XCTAssertTrue([NSJSONSerialization isValidJSONObject:toValidateJson]);
+
 }
-
-- (void)testConformsToSchema {
-    NSString *filepath = [self.bundle pathForResource:@"geoJSONSchema"
-                                               ofType:@"json"];
-    NSLog(@"filepath %@", filepath);
-    NSURL *schema = [NSURL fileURLWithPath:filepath];
-    NSData *schemaData = [NSData dataWithContentsOfURL:schema];
-    NSError *seralizationError = nil;
-    VVJSONSchema *jsonSchema = [VVJSONSchema schemaWithData:schemaData baseURI:nil referenceStorage:nil error:&seralizationError];
-    NSError *validationError = nil;
-    NSDictionary *toValidateJson = [GBFSParser geoJSONFromAutoDiscovery:self.CitiBikeAutoDiscovery];
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:toValidateJson
-                                                       options:0
-                                                         error:&seralizationError];
-
-    XCTAssertTrue([jsonSchema validateObject:jsonData withError:&validationError]);
-}
-
 
 - (void)tearDown
 {
