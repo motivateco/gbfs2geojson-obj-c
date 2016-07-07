@@ -101,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				6003F5BB195388D20070C39A /* Tests.m */,
-				718162CB1D2EE87E00983BBB /* BlockMacros.h */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -113,6 +112,7 @@
 				6003F5B7195388D20070C39A /* Tests-Info.plist */,
 				6003F5B8195388D20070C39A /* InfoPlist.strings */,
 				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+				718162CB1D2EE87E00983BBB /* BlockMacros.h */,
 				7186E3001D255F0F00262BAF /* gbfs.json */,
 				7186E2FA1D241EFD00262BAF /* geoJSONSchema.json */,
 				7186E2FC1D24534D00262BAF /* station_information.json */,
